@@ -94,8 +94,14 @@
 #define RT_PIPE_BUFSZ 512
 #define RT_USING_SERIAL
 #define RT_SERIAL_RB_BUFSZ 64
+#define RT_USING_I2C
+#define RT_USING_I2C_BITOPS
 #define RT_USING_PIN
 #define RT_USING_SPI
+#define RT_USING_AUDIO
+#define RT_AUDIO_REPLAY_MP_BLOCK_SIZE 4096
+#define RT_AUDIO_REPLAY_MP_BLOCK_COUNT 2
+#define RT_AUDIO_RECORD_PIPE_SIZE 2048
 
 /* Using USB */
 
@@ -204,7 +210,8 @@
 #define SOC_SERIES_STM32H7
 
 /* Board extended module */
-
+#define ART_PI_USING_MEDIA_IO
+#define MEDIA_IO_USING_AUDIO
 /* end of Board extended module */
 
 /* Onboard Peripheral */
@@ -217,6 +224,13 @@
 #define BSP_USING_GPIO
 #define BSP_USING_UART
 #define BSP_USING_UART4
+#define BSP_USING_I2C
+#define BSP_USING_I2C3
+
+/* Notice: PH12 --> 124; PH11 --> 123 */
+
+#define BSP_I2C3_SCL_PIN 123
+#define BSP_I2C3_SDA_PIN 124
 /* end of On-chip Peripheral */
 /* end of Hardware Drivers Config */
 

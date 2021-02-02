@@ -153,6 +153,12 @@ void wm8988_init(struct rt_i2c_bus_device *dev)
 
     wm8988_reg_wrtie(dev, TREBLE_CONTROL | 0x07);
 
+    wm8988_reg_wrtie(dev, ALC1 | 0x1FB);
+
+    wm8988_reg_wrtie(dev, ADCL_SIGNAL_PATH | 0xF0);
+
+    wm8988_reg_wrtie(dev, ADCR_SIGNAL_PATH | 0xF0);
+
     wm8988_set_out_valume(dev, 58);
 
     wm8988_reg_read(dev, 0x00);
